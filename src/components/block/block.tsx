@@ -9,12 +9,13 @@ type BlockProps = {
   title: string
 }
 export const Block = (props: BlockProps) => {
-  const { title } = props
+  const { children, title } = props
 
   return (
     <div className={s.root}>
       <div className={s.titleBlock}>
         <Typography variant={'H1'}>{title}</Typography>
+        <div>{children}</div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { Block } from '@/components/block'
-import { WeeklySchedule } from '@/components/weekelySchedule/weeklySchedule'
+import { Block } from './components/block'
+import { WeeklySchedule } from './components/weekelySchedule'
 
 export type TimeIntervalItemType = {
   end: string
@@ -66,10 +66,10 @@ export function App() {
   }
 
   return (
-    <div>
+    <>
       <Block title={'Расписание'}>
         <WeeklySchedule timeIntervals={timeIntervals} updateTimeIntervals={updateTimeInterval} />
       </Block>
-    </div>
+    </>
   )
 }
