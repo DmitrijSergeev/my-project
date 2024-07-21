@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+
+  @media (width <= 360px) {
+    flex-wrap: wrap;
+  }
+}
+
+.schedule {
+  width: 100%;
+
+  background-color: var(--color-light-100);
+  border-top: 1px solid var(--color-light-700);
+  border-bottom: 1px solid var(--color-light-700);
+  border-left: 1px solid var(--color-light-700);
+
+  @media (width <= 650px) {
+    height: 110px;
+  }
+
+  @media (width <= 473px) {
+    height: 143px;
+  }
+
+  @media (width <= 360px) {
+    height: 120px;
+    border-right: 1px solid var(--color-light-700);
+  }
+}

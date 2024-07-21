@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import { Block } from '@/components/block'
+import { WeeklySchedule } from '@/components/weekelySchedule/weeklySchedule'
+
 export type TimeIntervalItemType = {
   end: string
   is_working: boolean
@@ -57,9 +60,16 @@ const weeklySchedule = {
 
 export function App() {
   const [timeIntervals, setTimeIntervals] = useState<TimeIntervals>(weeklySchedule)
+
   const updateTimeInterval = (time: TimeIntervals) => {
     setTimeIntervals(time)
   }
 
-  return <div>Hello</div>
+  return (
+    <div>
+      <Block title={'Расписание'}>
+        <WeeklySchedule timeIntervals={timeIntervals} updateTimeIntervals={updateTimeInterval} />
+      </Block>
+    </div>
+  )
 }
