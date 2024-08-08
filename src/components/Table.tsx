@@ -55,7 +55,7 @@ export const TableApp = () => {
       }
     }
 
-    loadData()
+    //loadData()
   }, [request])
 
   return (
