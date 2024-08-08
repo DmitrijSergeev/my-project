@@ -1,9 +1,9 @@
-import { Table } from './components/Table'
+import { TableApp } from './components/Table'
 
 export function App() {
   return (
     <>
-      <Table />
+      <TableApp />
     </>
   )
 }
